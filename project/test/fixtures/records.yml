@@ -1,0 +1,163 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  crime_id: 1
+  name: MyString
+  first: MyString
+  last: MyString
+  compas_screening_date: 2019-12-05
+  sex: MyString
+  dob: 2019-12-05
+  age: 1
+  age_cat: MyText
+  race: MyString
+  juv_fel_count: 1
+  decile_score: 
+  juv_misd_count: 1
+  juv_other_count: 1
+  priors_count: 1
+  days_b_screening_arrest: 1
+  c_jail_in: 2019-12-05 21:00:37
+  c_jail_out: 2019-12-05 21:00:37
+  c_case_number: 1
+  c_offense_date: 2019-12-05 21:00:37
+  c_arrest_date: 2019-12-05 21:00:37
+  c_days_from_compas: 1
+  c_charge_degree: MyString
+  c_charge_desc: MyText
+  is_recid: 1
+  r_case_number: MyString
+  r_charge_degree: MyString
+  r_offense_date: 2019-12-05
+  r_charge_desc: MyText
+  r_jail_in: 2019-12-05
+  r_jail_out: 2019-12-05
+  is_violent_recid: 1
+  vr_case_number: MyString
+  vr_charge_degree: MyString
+  vr_offense_date: 2019-12-05
+  vr_charge_desc: MyText
+  type_of_assessment: MyText
+  score_text: MyString
+  screening_date: 2019-12-05
+  v_type_of_assessment: MyText
+  v_decile_score: 1
+  v_score_text: MyString
+  v_screening_date: 2019-12-05
+  in_custody: 2019-12-05
+  out_custody: 2019-12-05
+  Start: 1
+  end: 1
+  event: 1
+  two_year_recid: 1
+  age_at_first_arrest: 1
+  first_arrest: MyString
+  active_supervision: 1
+  pending_charge: MyString
+  fta_1: 1
+  fta_2: 1
+  fta_3: 1
+  fta_4: 1
+  fta_5: 1
+  fta_6: 1
+  fta_older: 1
+  prior_misdemeanors: 1
+  prior_felonies: 1
+  prior_misdemeanors_last_year: 1
+  prior_misdemeanors_last_two_years: 1
+  violent_priors: 1
+  prior_incarcerations: 1
+  prior_drug_convictions: 1
+  current_violent_charge: MyString
+  current_f_dtf: MyString
+  Employment: MyString
+  expects_someone: MyString
+  drug_abuse_history: MyString
+  illegal_drug_use: MyString
+  current_residences: MyString
+  current_residence: MyString
+  children_spouse_or_parent: MyString
+  Nyc: MyString
+  Telephone: MyString
+  r_days_from_arrest: 1
+
+two:
+  crime_id: 1
+  name: MyString
+  first: MyString
+  last: MyString
+  compas_screening_date: 2019-12-05
+  sex: MyString
+  dob: 2019-12-05
+  age: 1
+  age_cat: MyText
+  race: MyString
+  juv_fel_count: 1
+  decile_score: 
+  juv_misd_count: 1
+  juv_other_count: 1
+  priors_count: 1
+  days_b_screening_arrest: 1
+  c_jail_in: 2019-12-05 21:00:37
+  c_jail_out: 2019-12-05 21:00:37
+  c_case_number: 1
+  c_offense_date: 2019-12-05 21:00:37
+  c_arrest_date: 2019-12-05 21:00:37
+  c_days_from_compas: 1
+  c_charge_degree: MyString
+  c_charge_desc: MyText
+  is_recid: 1
+  r_case_number: MyString
+  r_charge_degree: MyString
+  r_offense_date: 2019-12-05
+  r_charge_desc: MyText
+  r_jail_in: 2019-12-05
+  r_jail_out: 2019-12-05
+  is_violent_recid: 1
+  vr_case_number: MyString
+  vr_charge_degree: MyString
+  vr_offense_date: 2019-12-05
+  vr_charge_desc: MyText
+  type_of_assessment: MyText
+  score_text: MyString
+  screening_date: 2019-12-05
+  v_type_of_assessment: MyText
+  v_decile_score: 1
+  v_score_text: MyString
+  v_screening_date: 2019-12-05
+  in_custody: 2019-12-05
+  out_custody: 2019-12-05
+  Start: 1
+  end: 1
+  event: 1
+  two_year_recid: 1
+  age_at_first_arrest: 1
+  first_arrest: MyString
+  active_supervision: 1
+  pending_charge: MyString
+  fta_1: 1
+  fta_2: 1
+  fta_3: 1
+  fta_4: 1
+  fta_5: 1
+  fta_6: 1
+  fta_older: 1
+  prior_misdemeanors: 1
+  prior_felonies: 1
+  prior_misdemeanors_last_year: 1
+  prior_misdemeanors_last_two_years: 1
+  violent_priors: 1
+  prior_incarcerations: 1
+  prior_drug_convictions: 1
+  current_violent_charge: MyString
+  current_f_dtf: MyString
+  Employment: MyString
+  expects_someone: MyString
+  drug_abuse_history: MyString
+  illegal_drug_use: MyString
+  current_residences: MyString
+  current_residence: MyString
+  children_spouse_or_parent: MyString
+  Nyc: MyString
+  Telephone: MyString
+  r_days_from_arrest: 1

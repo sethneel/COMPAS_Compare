@@ -1,0 +1,183 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Crime</th>
+      <th>Name</th>
+      <th>First</th>
+      <th>Last</th>
+      <th>Compas screening date</th>
+      <th>Sex</th>
+      <th>Dob</th>
+      <th>Age</th>
+      <th>Age cat</th>
+      <th>Race</th>
+      <th>Juv fel count</th>
+      <th>Decile score</th>
+      <th>Juv misd count</th>
+      <th>Juv other count</th>
+      <th>Priors count</th>
+      <th>Days b screening arrest</th>
+      <th>C jail in</th>
+      <th>C jail out</th>
+      <th>C case number</th>
+      <th>C offense date</th>
+      <th>C arrest date</th>
+      <th>C days from compas</th>
+      <th>C charge degree</th>
+      <th>C charge desc</th>
+      <th>Is recid</th>
+      <th>R case number</th>
+      <th>R charge degree</th>
+      <th>R offense date</th>
+      <th>R charge desc</th>
+      <th>R jail in</th>
+      <th>R jail out</th>
+      <th>Is violent recid</th>
+      <th>Vr case number</th>
+      <th>Vr charge degree</th>
+      <th>Vr offense date</th>
+      <th>Vr charge desc</th>
+      <th>Type of assessment</th>
+      <th>Score text</th>
+      <th>Screening date</th>
+      <th>V type of assessment</th>
+      <th>V decile score</th>
+      <th>V score text</th>
+      <th>V screening date</th>
+      <th>In custody</th>
+      <th>Out custody</th>
+      <th>Start</th>
+      <th>End</th>
+      <th>Event</th>
+      <th>Two year recid</th>
+      <th>Age at first arrest</th>
+      <th>First arrest</th>
+      <th>Active supervision</th>
+      <th>Pending charge</th>
+      <th>Fta 1</th>
+      <th>Fta 2</th>
+      <th>Fta 3</th>
+      <th>Fta 4</th>
+      <th>Fta 5</th>
+      <th>Fta 6</th>
+      <th>Fta older</th>
+      <th>Prior misdemeanors</th>
+      <th>Prior felonies</th>
+      <th>Prior misdemeanors last year</th>
+      <th>Prior misdemeanors last two years</th>
+      <th>Violent priors</th>
+      <th>Prior incarcerations</th>
+      <th>Prior drug convictions</th>
+      <th>Current violent charge</th>
+      <th>Current f dtf</th>
+      <th>Employment</th>
+      <th>Expects someone</th>
+      <th>Drug abuse history</th>
+      <th>Illegal drug use</th>
+      <th>Current residences</th>
+      <th>Current residence</th>
+      <th>Children spouse or parent</th>
+      <th>Nyc</th>
+      <th>Telephone</th>
+      <th>R days from arrest</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @records.each do |record| %>
+      <tr>
+        <td><%= record.crime_id %></td>
+        <td><%= record.name %></td>
+        <td><%= record.first %></td>
+        <td><%= record.last %></td>
+        <td><%= record.compas_screening_date %></td>
+        <td><%= record.sex %></td>
+        <td><%= record.dob %></td>
+        <td><%= record.age %></td>
+        <td><%= record.age_cat %></td>
+        <td><%= record.race %></td>
+        <td><%= record.juv_fel_count %></td>
+        <td><%= record.decile_score %></td>
+        <td><%= record.juv_misd_count %></td>
+        <td><%= record.juv_other_count %></td>
+        <td><%= record.priors_count %></td>
+        <td><%= record.days_b_screening_arrest %></td>
+        <td><%= record.c_jail_in %></td>
+        <td><%= record.c_jail_out %></td>
+        <td><%= record.c_case_number %></td>
+        <td><%= record.c_offense_date %></td>
+        <td><%= record.c_arrest_date %></td>
+        <td><%= record.c_days_from_compas %></td>
+        <td><%= record.c_charge_degree %></td>
+        <td><%= record.c_charge_desc %></td>
+        <td><%= record.is_recid %></td>
+        <td><%= record.r_case_number %></td>
+        <td><%= record.r_charge_degree %></td>
+        <td><%= record.r_offense_date %></td>
+        <td><%= record.r_charge_desc %></td>
+        <td><%= record.r_jail_in %></td>
+        <td><%= record.r_jail_out %></td>
+        <td><%= record.is_violent_recid %></td>
+        <td><%= record.vr_case_number %></td>
+        <td><%= record.vr_charge_degree %></td>
+        <td><%= record.vr_offense_date %></td>
+        <td><%= record.vr_charge_desc %></td>
+        <td><%= record.type_of_assessment %></td>
+        <td><%= record.score_text %></td>
+        <td><%= record.screening_date %></td>
+        <td><%= record.v_type_of_assessment %></td>
+        <td><%= record.v_decile_score %></td>
+        <td><%= record.v_score_text %></td>
+        <td><%= record.v_screening_date %></td>
+        <td><%= record.in_custody %></td>
+        <td><%= record.out_custody %></td>
+        <td><%= record.Start %></td>
+        <td><%= record.end %></td>
+        <td><%= record.event %></td>
+        <td><%= record.two_year_recid %></td>
+        <td><%= record.age_at_first_arrest %></td>
+        <td><%= record.first_arrest %></td>
+        <td><%= record.active_supervision %></td>
+        <td><%= record.pending_charge %></td>
+        <td><%= record.fta_1 %></td>
+        <td><%= record.fta_2 %></td>
+        <td><%= record.fta_3 %></td>
+        <td><%= record.fta_4 %></td>
+        <td><%= record.fta_5 %></td>
+        <td><%= record.fta_6 %></td>
+        <td><%= record.fta_older %></td>
+        <td><%= record.prior_misdemeanors %></td>
+        <td><%= record.prior_felonies %></td>
+        <td><%= record.prior_misdemeanors_last_year %></td>
+        <td><%= record.prior_misdemeanors_last_two_years %></td>
+        <td><%= record.violent_priors %></td>
+        <td><%= record.prior_incarcerations %></td>
+        <td><%= record.prior_drug_convictions %></td>
+        <td><%= record.current_violent_charge %></td>
+        <td><%= record.current_f_dtf %></td>
+        <td><%= record.Employment %></td>
+        <td><%= record.expects_someone %></td>
+        <td><%= record.drug_abuse_history %></td>
+        <td><%= record.illegal_drug_use %></td>
+        <td><%= record.current_residences %></td>
+        <td><%= record.current_residence %></td>
+        <td><%= record.children_spouse_or_parent %></td>
+        <td><%= record.Nyc %></td>
+        <td><%= record.Telephone %></td>
+        <td><%= record.r_days_from_arrest %></td>
+        <td><%= link_to 'Show', record %></td>
+        <td><%= link_to 'Edit', edit_record_path(record) %></td>
+        <td><%= link_to 'Destroy', record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Record', new_record_path %>

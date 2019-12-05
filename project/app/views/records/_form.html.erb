@@ -1,0 +1,412 @@
+<%= form_with(model: record, local: true) do |form| %>
+  <% if record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(record.errors.count, "error") %> prohibited this record from being saved:</h2>
+
+      <ul>
+        <% record.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :crime_id %>
+    <%= form.number_field :crime_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :first %>
+    <%= form.text_field :first %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last %>
+    <%= form.text_field :last %>
+  </div>
+
+  <div class="field">
+    <%= form.label :compas_screening_date %>
+    <%= form.date_select :compas_screening_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sex %>
+    <%= form.text_field :sex %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dob %>
+    <%= form.date_select :dob %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age_cat %>
+    <%= form.text_area :age_cat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :race %>
+    <%= form.text_field :race %>
+  </div>
+
+  <div class="field">
+    <%= form.label :juv_fel_count %>
+    <%= form.number_field :juv_fel_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :decile_score %>
+    <%= form.text_field :decile_score %>
+  </div>
+
+  <div class="field">
+    <%= form.label :juv_misd_count %>
+    <%= form.number_field :juv_misd_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :juv_other_count %>
+    <%= form.number_field :juv_other_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :priors_count %>
+    <%= form.number_field :priors_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :days_b_screening_arrest %>
+    <%= form.number_field :days_b_screening_arrest %>
+  </div>
+
+  <div class="field">
+    <%= form.label :c_jail_in %>
+    <%= form.datetime_select :c_jail_in %>
+  </div>
+
+  <div class="field">
+    <%= form.label :c_jail_out %>
+    <%= form.datetime_select :c_jail_out %>
+  </div>
+
+  <div class="field">
+    <%= form.label :c_case_number %>
+    <%= form.number_field :c_case_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :c_offense_date %>
+    <%= form.datetime_select :c_offense_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :c_arrest_date %>
+    <%= form.datetime_select :c_arrest_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :c_days_from_compas %>
+    <%= form.number_field :c_days_from_compas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :c_charge_degree %>
+    <%= form.text_field :c_charge_degree %>
+  </div>
+
+  <div class="field">
+    <%= form.label :c_charge_desc %>
+    <%= form.text_area :c_charge_desc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_recid %>
+    <%= form.number_field :is_recid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :r_case_number %>
+    <%= form.text_field :r_case_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :r_charge_degree %>
+    <%= form.text_field :r_charge_degree %>
+  </div>
+
+  <div class="field">
+    <%= form.label :r_offense_date %>
+    <%= form.date_select :r_offense_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :r_charge_desc %>
+    <%= form.text_area :r_charge_desc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :r_jail_in %>
+    <%= form.date_select :r_jail_in %>
+  </div>
+
+  <div class="field">
+    <%= form.label :r_jail_out %>
+    <%= form.date_select :r_jail_out %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_violent_recid %>
+    <%= form.number_field :is_violent_recid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vr_case_number %>
+    <%= form.text_field :vr_case_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vr_charge_degree %>
+    <%= form.text_field :vr_charge_degree %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vr_offense_date %>
+    <%= form.date_select :vr_offense_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vr_charge_desc %>
+    <%= form.text_area :vr_charge_desc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type_of_assessment %>
+    <%= form.text_area :type_of_assessment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :score_text %>
+    <%= form.text_field :score_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :screening_date %>
+    <%= form.date_select :screening_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :v_type_of_assessment %>
+    <%= form.text_area :v_type_of_assessment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :v_decile_score %>
+    <%= form.number_field :v_decile_score %>
+  </div>
+
+  <div class="field">
+    <%= form.label :v_score_text %>
+    <%= form.text_field :v_score_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :v_screening_date %>
+    <%= form.date_select :v_screening_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :in_custody %>
+    <%= form.date_select :in_custody %>
+  </div>
+
+  <div class="field">
+    <%= form.label :out_custody %>
+    <%= form.date_select :out_custody %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Start %>
+    <%= form.number_field :Start %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end %>
+    <%= form.number_field :end %>
+  </div>
+
+  <div class="field">
+    <%= form.label :event %>
+    <%= form.number_field :event %>
+  </div>
+
+  <div class="field">
+    <%= form.label :two_year_recid %>
+    <%= form.number_field :two_year_recid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age_at_first_arrest %>
+    <%= form.number_field :age_at_first_arrest %>
+  </div>
+
+  <div class="field">
+    <%= form.label :first_arrest %>
+    <%= form.text_field :first_arrest %>
+  </div>
+
+  <div class="field">
+    <%= form.label :active_supervision %>
+    <%= form.number_field :active_supervision %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pending_charge %>
+    <%= form.text_field :pending_charge %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fta_1 %>
+    <%= form.number_field :fta_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fta_2 %>
+    <%= form.number_field :fta_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fta_3 %>
+    <%= form.number_field :fta_3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fta_4 %>
+    <%= form.number_field :fta_4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fta_5 %>
+    <%= form.number_field :fta_5 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fta_6 %>
+    <%= form.number_field :fta_6 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fta_older %>
+    <%= form.number_field :fta_older %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prior_misdemeanors %>
+    <%= form.number_field :prior_misdemeanors %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prior_felonies %>
+    <%= form.number_field :prior_felonies %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prior_misdemeanors_last_year %>
+    <%= form.number_field :prior_misdemeanors_last_year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prior_misdemeanors_last_two_years %>
+    <%= form.number_field :prior_misdemeanors_last_two_years %>
+  </div>
+
+  <div class="field">
+    <%= form.label :violent_priors %>
+    <%= form.number_field :violent_priors %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prior_incarcerations %>
+    <%= form.number_field :prior_incarcerations %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prior_drug_convictions %>
+    <%= form.number_field :prior_drug_convictions %>
+  </div>
+
+  <div class="field">
+    <%= form.label :current_violent_charge %>
+    <%= form.text_field :current_violent_charge %>
+  </div>
+
+  <div class="field">
+    <%= form.label :current_f_dtf %>
+    <%= form.text_field :current_f_dtf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Employment %>
+    <%= form.text_field :Employment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :expects_someone %>
+    <%= form.text_field :expects_someone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :drug_abuse_history %>
+    <%= form.text_field :drug_abuse_history %>
+  </div>
+
+  <div class="field">
+    <%= form.label :illegal_drug_use %>
+    <%= form.text_field :illegal_drug_use %>
+  </div>
+
+  <div class="field">
+    <%= form.label :current_residences %>
+    <%= form.text_field :current_residences %>
+  </div>
+
+  <div class="field">
+    <%= form.label :current_residence %>
+    <%= form.text_field :current_residence %>
+  </div>
+
+  <div class="field">
+    <%= form.label :children_spouse_or_parent %>
+    <%= form.text_field :children_spouse_or_parent %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Nyc %>
+    <%= form.text_field :Nyc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Telephone %>
+    <%= form.text_field :Telephone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :r_days_from_arrest %>
+    <%= form.number_field :r_days_from_arrest %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
