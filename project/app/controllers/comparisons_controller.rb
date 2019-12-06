@@ -1,5 +1,6 @@
 class ComparisonsController < ApplicationController
   before_action :set_comparison, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /comparisons
   # GET /comparisons.json
@@ -9,17 +10,17 @@ class ComparisonsController < ApplicationController
 
   def start_survey
     # get two records (that aren't the same) and create comparison object
-    random_index = record_size.times.map { rand(2) }
+    random_index = 2.times.map {rand(Record.count)}
     @records = Record.find(random_index)
     @record_1 = @records[0]
     @record_2 = @records[1]
-    # save the comparison [implement after implement current user]
-    # @comparison = Comparison.new({})
-    # @comparison.save
+
   end
   
-
-  def update_survey
+  # handle post request from survey page
+  # save comparison data 
+  # redirect
+  def next_survey_result
 
   end
 

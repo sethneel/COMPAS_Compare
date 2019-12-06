@@ -13,6 +13,8 @@ gem 'pg'
 # pry for debug
 gem 'pry'
 
+gem 'devise'
+
 # needed for bootstrap
 gem 'jquery-rails'
 # install bootstrap

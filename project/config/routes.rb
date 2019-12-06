@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get root to: 'users#home'
   get '/comparisons/start_survey', to: 'comparisons#start_survey'
   resources :records 
