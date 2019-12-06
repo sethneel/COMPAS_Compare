@@ -9,7 +9,13 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <%= render 'layouts/navbar' %>
+
+  <body style="padding-top:70px;">
+
+    <div class="container" align="left">
+      <%= yield %>
+    </div>
   </body>
 </html>
+

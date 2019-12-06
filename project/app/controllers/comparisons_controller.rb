@@ -7,6 +7,22 @@ class ComparisonsController < ApplicationController
     @comparisons = Comparison.all
   end
 
+  def start_survey
+    # get two records (that aren't the same) and create comparison object
+    random_index = record_size.times.map { rand(2) }
+    @records = Record.find(random_index)
+    @record_1 = @records[0]
+    @record_2 = @records[1]
+    # save the comparison [implement after implement current user]
+    # @comparison = Comparison.new({})
+    # @comparison.save
+  end
+  
+
+  def update_survey
+
+  end
+
   # GET /comparisons/1
   # GET /comparisons/1.json
   def show

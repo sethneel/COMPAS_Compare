@@ -77,4 +77,3 @@ children_spouse_or_parent:string
 Nyc:string	
 Telephone:string
 r_days_from_arrest:integer
-violent_recid:integer	
