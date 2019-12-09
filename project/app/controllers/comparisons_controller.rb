@@ -37,10 +37,24 @@ end
 
   def start_survey
     # get two records (that aren't the same) and create comparison object
-    random_index = 2.times.map {rand(Record.count)}
-    @records = Record.find(random_index)
-    @record_1 = @records[0]
-    @record_2 = @records[1]
+    response_1 = JSON.parse(Net::HTTP.get_response('algowatch.herokuapp.com', '/random').body)
+    response_1["crime_id"] = response_1.delete("id")
+    @rec_cols = Record.column_names
+    record_1_hash = response_1.select { |key,_| @rec_cols.include? key }
+    @record_1 = Record.new(record_1_hash)
+    @record_1.save
+    response_2 = JSON.parse(Net::HTTP.get_response('algowatch.herokuapp.com', '/random').body)
+    response_2["crime_id"] = response_1.delete("id")
+    record_2_hash = response_1.select { |key,_| @rec_cols.include? key }
+    @record_2 = Record.new(record_1_hash)
+    @record_2.save
+
+    # [deprecated] pull random records from db. Faster. 
+    # random_index = 2.times.map {rand(Record.count)}
+    # @records = Record.find(random_index)
+    # @record_1 = @records[0]
+    # @record_2 = @records[1]
+
   end
   
   # handle post request from survey page

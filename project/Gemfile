@@ -13,6 +13,7 @@ gem 'pg'
 # pry for debug
 gem 'pry'
 
+# authentication
 gem 'devise'
 
 # needed for bootstrap
