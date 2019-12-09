@@ -1,225 +1,231 @@
 
+<p>
+In your opinion would it be <i> fair </i> if an individual with Record 1 was <br />
+released from prison, while and individual with Record 2 was not? 
+</p>
+
 <div class="row" align="left">
             
     <div class="col-sm-6">
         <p>
-        <strong>Crime:</strong>
-        <%= @record_1.crime_id %>
+            <a class="btn btn-info" href= <%="save_comparison/0/#{@record_1.id}/#{@record_2.id}"%> role="button"> Record 1</a>
+        </p>
+        <p>
+            <strong>Crime:</strong>
+            <%= @record_1.crime_id %>
         </p>
 
-
-        <strong>Sex:</strong>
-        <%= @record_1.sex %>
+        <p>
+            <strong>Sex:</strong>
+            <%= @record_1.sex %>
         </p>
 
 
         <p>
-        <strong>Age:</strong>
-        <%= @record_1.age %>
+            <strong>Age:</strong>
+            <%= @record_1.age %>
         </p>
 
         <p>
-        <strong>Race:</strong>
-        <%= @record_1.race %>
+            <strong>Race:</strong>
+            <%= @record_1.race %>
         </p>
 
         <p>
-        <strong>Juv fel count:</strong>
-        <%= @record_1.juv_fel_count %>
+            <strong>Juv fel count:</strong>
+            <%= @record_1.juv_fel_count %>
         </p>
 
         <p>
-        <strong>Juv misd count:</strong>
-        <%= @record_1.juv_misd_count %>
+            <strong>Juv misd count:</strong>
+            <%= @record_1.juv_misd_count %>
         </p>
 
         <p>
-        <strong>Priors count:</strong>
-        <%= @record_1.priors_count %>
-        </p>
-
-
-
-        <p>
-        <strong>C charge degree:</strong>
-        <%= @record_1.c_charge_degree %>
-        </p>
-
-
-        <p>
-        <strong>Age at first arrest:</strong>
-        <%= @record_1.age_at_first_arrest %>
+            <strong>Priors count:</strong>
+            <%= @record_1.priors_count %>
         </p>
 
         <p>
-        <strong>First arrest:</strong>
-        <%= @record_1.first_arrest %>
+            <strong>C charge degree:</strong>
+            <%= @record_1.c_charge_degree %>
         </p>
 
         <p>
-        <strong>Pending charge:</strong>
-        <%= @record_1.pending_charge %>
+            <strong>Age at first arrest:</strong>
+            <%= @record_1.age_at_first_arrest %>
         </p>
 
         <p>
-        <strong>Prior misdemeanors:</strong>
-        <%= @record_1.prior_misdemeanors %>
+            <strong>First arrest:</strong>
+            <%= @record_1.first_arrest %>
         </p>
 
         <p>
-        <strong>Prior felonies:</strong>
-        <%= @record_1.prior_felonies %>
+            <strong>Pending charge:</strong>
+            <%= @record_1.pending_charge %>
         </p>
 
         <p>
-        <strong>Prior misdemeanors last year:</strong>
-        <%= @record_1.prior_misdemeanors_last_year %>
+            <strong>Prior misdemeanors:</strong>
+            <%= @record_1.prior_misdemeanors %>
         </p>
 
         <p>
-        <strong>Prior misdemeanors last two years:</strong>
-        <%= @record_1.prior_misdemeanors_last_two_years %>
+            <strong>Prior felonies:</strong>
+            <%= @record_1.prior_felonies %>
         </p>
 
         <p>
-        <strong>Violent priors:</strong>
-        <%= @record_1.violent_priors %>
+            <strong>Prior misdemeanors last year:</strong>
+            <%= @record_1.prior_misdemeanors_last_year %>
         </p>
 
         <p>
-        <strong>Prior incarcerations:</strong>
-        <%= @record_1.prior_incarcerations %>
+            <strong>Prior misdemeanors last two years:</strong>
+            <%= @record_1.prior_misdemeanors_last_two_years %>
         </p>
 
         <p>
-        <strong>Prior drug convictions:</strong>
-        <%= @record_1.prior_drug_convictions %>
+            <strong>Violent priors:</strong>
+            <%= @record_1.violent_priors %>
         </p>
 
         <p>
-        <strong>Current violent charge:</strong>
-        <%= @record_1.current_violent_charge %>
+            <strong>Prior incarcerations:</strong>
+            <%= @record_1.prior_incarcerations %>
         </p>
 
         <p>
-        <strong>Employment:</strong>
-        <%= @record_1.Employment %>
+            <strong>Prior drug convictions:</strong>
+            <%= @record_1.prior_drug_convictions %>
         </p>
 
         <p>
-        <strong>Illegal drug use:</strong>
-        <%= @record_1.illegal_drug_use %>
+            <strong>Current violent charge:</strong>
+            <%= @record_1.current_violent_charge %>
+        </p>
+
+        <p>
+            <strong>Employment:</strong>
+            <%= @record_1.Employment %>
+        </p>
+
+        <p>
+            <strong>Illegal drug use:</strong>
+            <%= @record_1.illegal_drug_use %>
         </p>
     </div>
     
     <div class="col-sm-6">
-        <p>
-        <strong>Crime:</strong>
-        <%= @record_2.crime_id %>
-        </p>
-
-
-        <strong>Sex:</strong>
-        <%= @record_2.sex %>
-        </p>
-
 
         <p>
-        <strong>Age:</strong>
-        <%= @record_2.age %>
+            <a class="btn btn-info" href= <%="save_comparison/1/#{@record_1.id}/#{@record_2.id}"%> role="button"> Record 2</a>
         </p>
 
         <p>
-        <strong>Race:</strong>
-        <%= @record_2.race %>
+            <strong>Crime:</strong>
+            <%= @record_2.crime_id %>
         </p>
 
         <p>
-        <strong>Juv fel count:</strong>
-        <%= @record_2.juv_fel_count %>
+            <strong>Sex:</strong>
+            <%= @record_2.sex %>
         </p>
 
         <p>
-        <strong>Juv misd count:</strong>
-        <%= @record_2.juv_misd_count %>
+            <strong>Age:</strong>
+            <%= @record_2.age %>
         </p>
 
         <p>
-        <strong>Priors count:</strong>
-        <%= @record_2.priors_count %>
-        </p>
-
-
-
-        <p>
-        <strong>C charge degree:</strong>
-        <%= @record_2.c_charge_degree %>
-        </p>
-
-
-        <p>
-        <strong>Age at first arrest:</strong>
-        <%= @record_2.age_at_first_arrest %>
+            <strong>Race:</strong>
+            <%= @record_2.race %>
         </p>
 
         <p>
-        <strong>First arrest:</strong>
-        <%= @record_2.first_arrest %>
+            <strong>Juv fel count:</strong>
+            <%= @record_2.juv_fel_count %>
         </p>
 
         <p>
-        <strong>Pending charge:</strong>
-        <%= @record_2.pending_charge %>
+            <strong>Juv misd count:</strong>
+            <%= @record_2.juv_misd_count %>
         </p>
 
         <p>
-        <strong>Prior misdemeanors:</strong>
-        <%= @record_2.prior_misdemeanors %>
+            <strong>Priors count:</strong>
+            <%= @record_2.priors_count %>
         </p>
 
         <p>
-        <strong>Prior felonies:</strong>
-        <%= @record_2.prior_felonies %>
+            <strong>C charge degree:</strong>
+            <%= @record_2.c_charge_degree %>
         </p>
 
         <p>
-        <strong>Prior misdemeanors last year:</strong>
-        <%= @record_2.prior_misdemeanors_last_year %>
+            <strong>Age at first arrest:</strong>
+            <%= @record_2.age_at_first_arrest %>
         </p>
 
         <p>
-        <strong>Prior misdemeanors last two years:</strong>
-        <%= @record_2.prior_misdemeanors_last_two_years %>
+            <strong>First arrest:</strong>
+            <%= @record_2.first_arrest %>
         </p>
 
         <p>
-        <strong>Violent priors:</strong>
-        <%= @record_2.violent_priors %>
+            <strong>Pending charge:</strong>
+            <%= @record_2.pending_charge %>
         </p>
 
         <p>
-        <strong>Prior incarcerations:</strong>
-        <%= @record_2.prior_incarcerations %>
+            <strong>Prior misdemeanors:</strong>
+            <%= @record_2.prior_misdemeanors %>
         </p>
 
         <p>
-        <strong>Prior drug convictions:</strong>
-        <%= @record_2.prior_drug_convictions %>
+            <strong>Prior felonies:</strong>
+            <%= @record_2.prior_felonies %>
         </p>
 
         <p>
-        <strong>Current violent charge:</strong>
-        <%= @record_2.current_violent_charge %>
+            <strong>Prior misdemeanors last year:</strong>
+            <%= @record_2.prior_misdemeanors_last_year %>
         </p>
 
         <p>
-        <strong>Employment:</strong>
-        <%= @record_2.Employment %>
+            <strong>Prior misdemeanors last two years:</strong>
+            <%= @record_2.prior_misdemeanors_last_two_years %>
         </p>
 
         <p>
-        <strong>Illegal drug use:</strong>
-        <%= @record_2.illegal_drug_use %>
+            <strong>Violent priors:</strong>
+            <%= @record_2.violent_priors %>
+        </p>
+
+        <p>
+            <strong>Prior incarcerations:</strong>
+            <%= @record_2.prior_incarcerations %>
+        </p>
+
+        <p>
+            <strong>Prior drug convictions:</strong>
+            <%= @record_2.prior_drug_convictions %>
+        </p>
+
+        <p>
+            <strong>Current violent charge:</strong>
+            <%= @record_2.current_violent_charge %>
+        </p>
+
+        <p>
+            <strong>Employment:</strong>
+            <%= @record_2.Employment %>
+        </p>
+
+        <p>
+            <strong>Illegal drug use:</strong>
+            <%= @record_2.illegal_drug_use %>
         </p>
     </div>
 </div>
