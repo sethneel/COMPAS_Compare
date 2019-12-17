@@ -16,8 +16,7 @@ end
 # GET /comparisons/survey_end 
 # controller method for finishing survey 
 def survey_analytics
-  # FOR TESTING JUST SHOW 1 pair 
-  @pairs = Comparison.where(user_id: current_user.id)[0..1]
+  @pairs = Comparison.where(user_id: current_user.id)
   ids = []
   @scores_dict = {}
   @pairs.each do |pair|

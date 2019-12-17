@@ -16,6 +16,8 @@ gem 'pry'
 # authentication
 gem 'devise'
 
+gem 'carrierwave', '~> 2.0'
+
 # needed for bootstrap
 gem 'jquery-rails'
 # install bootstrap
