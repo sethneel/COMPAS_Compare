@@ -16,8 +16,22 @@ end
 # GET /comparisons/survey_end 
 # controller method for finishing survey 
 def survey_analytics
-
-
+  # FOR TESTING JUST SHOW 1 pair 
+  @pairs = Comparison.where(user_id: current_user.id)[0..1]
+  ids = []
+  @scores_dict = {}
+  @pairs.each do |pair|
+    ids << pair.record_1.crime_id
+    ids << pair.record_2.crime_id
+    # comment out the below 
+    @scores_dict[pair.record_1_id] = JSON.parse(Net::HTTP.get_response('algowatch.herokuapp.com', "/score/#{pair.record_1.crime_id}").body)
+    @scores_dict[pair.record_2_id] = JSON.parse(Net::HTTP.get_response('algowatch.herokuapp.com', "/score/#{pair.record_2.crime_id}").body)
+  end 
+  @score_names = @scores_dict[@pairs[0].record_1_id].keys
+  # efficient way to get the scores dict - debug later
+  #uri = URI.parse("http://algowatch.herokuapp.com/scores")
+  #params = {'record_ids' => ids}.to_json
+  #scores_dict = JSON.parse(Net::HTTP.post(uri, params).body)
 end
 
 def save_form_params
@@ -44,9 +58,9 @@ end
     @record_1 = Record.new(record_1_hash)
     @record_1.save
     response_2 = JSON.parse(Net::HTTP.get_response('algowatch.herokuapp.com', '/random').body)
-    response_2["crime_id"] = response_1.delete("id")
-    record_2_hash = response_1.select { |key,_| @rec_cols.include? key }
-    @record_2 = Record.new(record_1_hash)
+    response_2["crime_id"] = response_2.delete("id")
+    record_2_hash = response_2.select { |key,_| @rec_cols.include? key }
+    @record_2 = Record.new(record_2_hash)
     @record_2.save
 
     # [deprecated] pull random records from db. Faster. 

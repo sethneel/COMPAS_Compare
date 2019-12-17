@@ -1,0 +1,26 @@
+<div class="container">
+    <% @pairs.each do |comparison| %>
+        <div class="col-md-8">
+            <dl>
+                <dt>
+                    <%= "Record #{comparison.record_1_id} vs. Record #{comparison.record_2_id}" %>
+                </dt>
+                <% @score_names.each do |score_name| %>
+                    <dd class= "percentage percentage-<%=(@scores_dict[comparison.record_1_id][score_name]*100).round%>">
+                        <span class="text"> 
+                            <%= "#{score_name}_1: #{(@scores_dict[comparison.record_1_id][score_name]*100).round}" %> 
+                        </span>
+                    </dd>
+                    <dd class= "percentage percentage-<%=(@scores_dict[comparison.record_2_id][score_name]*100).round%>">
+                        <span class="text"> 
+                            <%= "#{score_name}_2: #{(@scores_dict[comparison.record_2_id][score_name]*100).round}" %> 
+                        </span>
+                    </dd>
+                    
+                <% end %>
+            </dl>
+        </div>
+    <% end %>
+ </div>
+
+
