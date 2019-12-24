@@ -20,17 +20,17 @@ def survey_analytics
   ids = []
   @scores_dict = {}
   @pairs.each do |pair|
-    ids << pair.record_1.crime_id
-    ids << pair.record_2.crime_id
-    # comment out the below 
-    @scores_dict[pair.record_1_id] = JSON.parse(Net::HTTP.get_response('algowatch.herokuapp.com', "/score/#{pair.record_1.crime_id}").body)
-    @scores_dict[pair.record_2_id] = JSON.parse(Net::HTTP.get_response('algowatch.herokuapp.com', "/score/#{pair.record_2.crime_id}").body)
+    ids << String(pair.record_1.crime_id)
+    ids << String(pair.record_2.crime_id)
   end 
-  @score_names = @scores_dict[@pairs[0].record_1_id].keys
-  # efficient way to get the scores dict - debug later
-  #uri = URI.parse("http://algowatch.herokuapp.com/scores")
-  #params = {'record_ids' => ids}.to_json
-  #scores_dict = JSON.parse(Net::HTTP.post(uri, params).body)
+  # get the scores with one api call
+  params = {'record_ids' => ids}
+  response = HTTParty.post('https://algowatch.herokuapp.com/scores', 
+    :body => params.to_json,
+    :headers => { 'Content-Type' => 'application/json' })
+  @scores_dict = JSON.parse(response.body)
+  @score_names = @scores_dict[String(@pairs[0].record_1.crime_id)].keys
+
 end
 
 def save_form_params
